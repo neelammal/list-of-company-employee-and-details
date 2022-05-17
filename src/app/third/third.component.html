@@ -1,0 +1,70 @@
+<h1 class="tb">Intern performance taken by {{naMe}}</h1>
+<table class="mat-table" mat-table [dataSource]="daTa3">
+
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let ele"> {{ele.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="marks">
+        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <td mat-cell *matCellDef="let element"> {{element.marks}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<label class="tb">cut off marks</label><input class="tb" [(ngModel)]="minimarks">
+<button class="tb" (click)="top3()">top scorers</button>
+<h4 class="tb">total number are {{newData.length}}</h4>
+
+<table mat-table [dataSource]="xyz" multiTemplateDataRows>
+    <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
+        <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+        <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+    </ng-container>
+
+    <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+    <ng-container matColumnDef="expandedDetail">
+        <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+            <div [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+                <div>
+                    <div> {{element.id}} </div>
+                    <div> {{element.name}} </div>
+                    <div> {{element.marks}} </div>
+
+                </div>
+
+            </div>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayedColumns;" [class.example-expanded-row]="expandedElement === element" (click)="expandedElement = expandedElement === element ? null : element">
+    </tr>
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']"></tr>
+</table>
+<!---
+<table class="tb" border="1px">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Marks</th>
+
+    </tr>
+    <tr *ngFor="let item of xyz ">
+        <th>{{item.id}}</th>
+        <th>{{item.name| uppercase}}</th>
+        <th>{{item.marks}}</th>
+    </tr>
+</table>-->
+<button class="tb" mat-flat-button color="primary" (click)="change()">change instructor</button>
+<button class="tb" mat-flat-button color="primary" (click)="delet()">delete component</button>
+<app-fourth *ngIf="showLifeCycle" [newName]="naMe" [winnerP]="winner"></app-fourth>

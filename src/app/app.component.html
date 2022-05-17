@@ -1,0 +1,107 @@
+<h1 class="tr">Home page of company</h1>
+<div class="main">
+    <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon>home</mat-icon>
+      </button>
+    <button class="second" mat-raised-button color="accent" routerLink="/detail of employee">list of employees</button>
+    <button mat-raised-button color="accent" routerLink="/calculator">salary calcultor</button>
+    <button class="third" mat-raised-button color="accent" routerLink="/perfromance">Intern performance</button>
+
+
+</div>
+<router-outlet></router-outlet>
+
+<!--<app-second></app-second>
+<app-angmat></app-angmat>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+    <mat-icon>home</mat-icon>
+  </button>
+<h1>company employee details</h1>
+<table border="1px">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+
+    </tr>
+    <tr *ngFor="let item of aBc">
+        <th>{{item.id}}</th>
+        <th>{{item.name| uppercase}}</th>
+        <th>{{item.age}}</th>
+    </tr>
+</table>
+
+<label>enter the employee id </label><input type="number" name="nuM" [(ngModel)]="nuM"><br>
+<label>enter the employee name</label><input type="string" name="woRd" [(ngModel)]="woRd"><br>
+<label>enter the employee age</label><input type="number" name="wo" [(ngModel)]="wo"><br>
+<button mat-raised-button color="primary" (click)="onAdd(nuM,woRd,wo)">add</button><br>
+<button mat-raised-button color="accent" (click)="find(nuM,woRd,wo)">delete</button><br>
+<h2>use of service</h2>
+<table border="1px">
+    <tr>
+        <th>country</th>
+        <th>Name</th>
+    </tr>
+    <tr *ngFor="let item of daTa">
+        <th>{{item.country|uppercase}}</th>
+        <th>{{item.name| uppercase}}</th>
+
+    </tr>
+</table>
+
+<br>
+
+<h2>calculator using ngModel</h2>
+
+<label>enter the first number</label><input type="number" name="num1 " [(ngModel)]="num1">
+<br><br>
+<label>enter the second number</label><input type="number" name="num2" [(ngModel)]="num2"><br><br>
+<button mat-mini-fab color="accent" (click)="add()">+</button>
+<button mat-mini-fab color="accent" (click)="sub()">-</button>
+<button mat-mini-fab color="accent" (click)="mul()">*</button>
+<button mat-mini-fab color="accent" (click)="div()">/</button> <br> Result is<input type="number" [(ngModel)]="num3" name="num3"><br><br><br>
+
+
+
+<!--<app-angmat></app-angmat>
+
+
+<input [(ngModel)]="abc">
+<br>
+<br>{{abc}} {{eNo.id}}..{{eNo.name}} {{xyz}}
+<button (click)="onCheck()">check the name</button>
+<h1>hello</h1>
+<h2>{{eNo.name}}</h2>
+<div [ngSwitch]="num">
+    <div *ngSwitchCase="'1'">One</div>
+    <div *ngSwitchCase="'2'">Two</div>
+    <div *ngSwitchCase="'3'">Three</div>
+    <div *ngSwitchCase="'4'">Four</div>
+    <div *ngSwitchCase="'5'">Five</div>
+    <div *ngSwitchDefault>This is Default</div>
+</div>
+<h3 [ngClass]="titleStyles">display items</h3>
+<div *ngIf="frD">list of ruits is</div>
+<a *ngFor=" let item of fruits; index as i; even as t">
+    <br>.{{i+1}}.{{item}}..<br></a>
+    <br>
+    <br>-->

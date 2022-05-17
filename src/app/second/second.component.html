@@ -1,0 +1,55 @@
+<h1 class="tb">Head Employees</h1>
+<table class="tb" border="1px">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr *ngFor="let item of aBc">
+        <th>{{item.id}}</th>
+        <th>{{item.name| uppercase}}</th>
+        <th>{{item.age}}</th>
+
+    </tr>
+</table>
+
+<label class="tb">Enter the employee Id </label><input class="ti1" type="number" name="nuM" [(ngModel)]="nuM"><br>
+<label class="tb">Enter the employee Name</label><input class="ti2" type="string" name="woRd" [(ngModel)]="woRd"><br>
+<label class="tb">Enter the employee Age</label><input class="ti3" type="number" name="wo" [(ngModel)]="wo"><br>
+<label class="tb">Enter the employee Address</label><input class="ti4" type="string" name="addre" [(ngModel)]="addre"><br>
+<label class="tb">Enter the employee contact number</label><input class="ti5" type="number" name="phone" [(ngModel)]="phone"><br>
+<button class="tr" mat-raised-button color="primary" (click)="onAdd(nuM,woRd,wo,addre,phone)">add </button>
+<button class="tr" mat-raised-button color="accent" (click)="find(nuM,woRd,wo,addre,phone)">delete</button><br>
+<h2 class="tb">list of employees(use of service)</h2>
+<table class="tb" border="1px">
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Contact Number</th>
+    </tr>
+    <tr *ngFor="let item of daTa">
+        <th>{{item.id}}</th>
+        <th>{{item.name| uppercase}}</th>
+        <th>{{item.age}}</th>
+        <th>{{item.address}}</th>
+        <th>{{item.contact_number}}</th>
+
+    </tr>
+</table>
+
+<br>
+
+
+
+<!---
+<h2>calculator using ngModel</h2>
+
+<label>enter the first number</label><input type="number" name="num1 " [(ngModel)]="num1">
+<br><br>
+<label>enter the second number</label><input type="number" name="num2" [(ngModel)]="num2"><br><br>
+<button mat-mini-fab color="accent" (click)="add()">+</button>
+<button mat-mini-fab color="accent" (click)="sub()">-</button>
+<button mat-mini-fab color="accent" (click)="mul()">*</button>
+<button mat-mini-fab color="accent" (click)="div()">/</button> <br> Result is<input type="number" [(ngModel)]="num3" name="num3"><br><br><br>-->

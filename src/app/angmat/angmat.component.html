@@ -1,0 +1,33 @@
+<h2 class="rt">salary details</h2>
+<table class="rt" border="1px">
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>no. of days work</th>
+        <th>monthly salary</th>
+    </tr>
+    <tr *ngFor="let item of daTa2">
+        <th>{{item.id}}</th>
+        <th>{{item.name| uppercase}}</th>
+        <th>{{item.days}}</th>
+        <th>{{item.salary}}</th>
+    </tr>
+</table>
+
+<h2 class="rt">calculate salary of employees</h2>
+
+<label class="rt">enter the one day salary price in rupees</label><input class="ti0" type="number" placeholder="20000" name="num1 " [(ngModel)]="num1">
+<br><br>
+<label class="rt">enter the number of days work</label><input class="ti1" type="number" name="num2" [(ngModel)]="num2"><br><br>
+<button class="rt" mat-mini-fab color="accent" (click)="add()">+</button>
+<button class="rt" mat-mini-fab color="accent" (click)="sub()">-</button>
+<button class="rt" mat-mini-fab color="accent" (click)="mul()">*</button>
+<button class="rt" mat-mini-fab color="accent" (click)="div()">/</button> <br>
+<label class="rt">monthly salary is</label> <input class="rt1" type="number" [(ngModel)]="num3" name="num3"><br>
+<label class="rt">Id of employee</label><input class="rt2" type="number" [(ngModel)]="num6"><br>
+<label class="rt">no. or working days</label><input class="rt3" type="number" [(ngModel)]="num4"><br>
+
+<label class="rt">monthly salary</label><input class="rt4" type="number" [(ngModel)]="num5"><br>
+
+
+<br><button mat-raised-button color="accent" (click)="upDate1()">update with salary and days</button>

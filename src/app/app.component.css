@@ -1,0 +1,25 @@
+.text-succ {
+    color: green;
+}
+
+.tr {
+    margin-left: 10px;
+}
+
+.text-dang {
+    color: yellow
+}
+
+.main {
+    background-color: brown;
+    margin-right: 40px;
+    color: aqua;
+}
+
+.second {
+    margin-right: 50px;
+}
+
+.third {
+    margin-left: 50px;
+}
